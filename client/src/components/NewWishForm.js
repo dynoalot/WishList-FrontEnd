@@ -13,13 +13,13 @@ const NewWishForm = () => {
     <form onSubmit={handleSubmit}>
       <p>My New Wish</p>
       <label>Description </label>
-      <input type="text"/>
+      <input type="text"/><br/>
       <label>Value </label>
-      <input type="number"/>
+      <input type="number"/><br/>
       <label>Link </label>
-      <input type="text"/>
-      <lable>Notes </lable>
-      <input type="text"/>
+      <input type="text"/><br/>
+      <label>Notes </label>
+      <input type="text"/><br/>
       <div>
         <NavLink to="/WishList">
           <button>Cancel</button>
