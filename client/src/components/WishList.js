@@ -9,7 +9,7 @@ const WishList = () => {
       <NavLink to="/">
         <button>Back to Dashboard</button>
       </NavLink>
-      <NavLink to="/WishList/WishListItem">
+      <NavLink to="/NewWishForm">
         <button>Add a wish</button>
       </NavLink>
     </div>

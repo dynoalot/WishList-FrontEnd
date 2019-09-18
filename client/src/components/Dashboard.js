@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import WishList from "./WishList";
+import { connect } from 'react-redux';
 
 const Dashboard = () => {
   return (
