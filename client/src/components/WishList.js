@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
+
+
 const WishList = ({ wishList }) => {
   return (
     <div>
@@ -22,12 +24,12 @@ const WishList = ({ wishList }) => {
         </thead>
         <tbody>
           {wishList.map(wish => (
-            <tr>
+            <tr key={wish.id}>
               <td>{wish.description}</td>
               <td>{wish.price}</td>
               <td>
                 <NavLink to="/NewWishForm">
-                  <button>See Datails</button>
+                  <button>See Details</button>
                 </NavLink>
               </td>
             </tr>

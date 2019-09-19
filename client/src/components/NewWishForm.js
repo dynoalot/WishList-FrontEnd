@@ -8,7 +8,8 @@ const NewWishForm = ({addWish, history}) => {
     description: '',
     price: '',
     link: '',
-    notes: ''
+    notes: '',
+    id: ''
   };
 
   const [wish, setWish] = useState(initialState);
@@ -21,9 +22,8 @@ const NewWishForm = ({addWish, history}) => {
 
   const handleInput = (event,key) => {
     const { value } = event.target;
-    const updatedState = {...wish,[key]: value } 
+    const updatedState = {...wish,[key]: value} 
     setWish(updatedState);
-
   }
 
   return (
