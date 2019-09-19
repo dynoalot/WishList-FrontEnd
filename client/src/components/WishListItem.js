@@ -1,12 +1,12 @@
 import React from 'react';
 
-const WishListItem = () => {
+const WishListItem = ({wish}) => {
   return (
     <div>
-      <h3>Wish works</h3>
-      <form>
-
-      </form>
+      <span>{wish.description}</span>
+      <span>{wish.value}</span>
+      <span>{wish.link}</span>
+      <span>{wish.notes}</span>
   </div>
   );
 }
