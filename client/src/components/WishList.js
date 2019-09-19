@@ -13,22 +13,26 @@ const WishList = ({ wishList }) => {
         <button>Add a wish</button>
       </NavLink>
       <table>
-        <tr>
-          <th>Description</th>
-          <th>Value</th>
-          <th>Details</th>
-        </tr>
-        {wishList.map(wish => (
+        <thead>
           <tr>
-            <th>{wish.description}</th>
-            <th>{wish.value}</th>
-            <th>
-              <NavLink to="/NewWishForm">
-                <button>See Datails</button>
-              </NavLink>
-            </th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Details</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {wishList.map(wish => (
+            <tr>
+              <td>{wish.description}</td>
+              <td>{wish.price}</td>
+              <td>
+                <NavLink to="/NewWishForm">
+                  <button>See Datails</button>
+                </NavLink>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

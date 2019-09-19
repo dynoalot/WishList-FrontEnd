@@ -8,7 +8,7 @@ const reducers = (state = INITIAL_STATE, action) => {
     case 'ADD_WISH':
       return {
         ...state,
-        wishList: [...state.wishList, action.wishList]
+        wishList: [...state.wishList, action.wish]
       };
     default:
       return state;

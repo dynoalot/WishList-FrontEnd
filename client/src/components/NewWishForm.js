@@ -3,7 +3,7 @@ import { NavLink, withRouter } from "react-router-dom";
 import { connect } from 'react-redux'
 import { addWish } from '../actions';
 
-const NewWishForm = ({addWish}) => {
+const NewWishForm = ({addWish, history}) => {
   const initialState = {
     description: '',
     price: '',
@@ -16,9 +16,10 @@ const NewWishForm = ({addWish}) => {
   const handleSubmit = event => {
     event.preventDefault();
     addWish(wish);
+    history.push("/WishList")
   }
 
-  const handleChange = (event,key) => {
+  const handleInput = (event,key) => {
     const { value } = event.target;
     const updatedState = {...wish,[key]: value } 
     setWish(updatedState);
@@ -32,26 +33,26 @@ const NewWishForm = ({addWish}) => {
       <input
         type="text"
         required
-        onChange={(e)=> handleChange(e,'description')}  placeholder="Description of my Wish"
+        onChange={(e)=> handleInput(e,'description')}  placeholder="Describe wish"
       /><br/>
       <label>Price </label>
       <input
-        type="number"
+        type="text"
         required
-        onChange={(e)=> handleChange(e,'price')}
-        placeholder="How much does my wish costs"
+        onChange={(e)=> handleInput(e,'price')}
+        placeholder="Costs of wish"
       /><br/>
       <label>Link </label>
       <input
         type="text"
-        onChange={(e)=> handleChange(e,'link')}
-        placeholder="URL to my wish"
+        onChange={(e)=> handleInput(e,'link')}
+        placeholder="URL to wish"
       /><br/>
       <label>Notes </label>
       <input
         type="text"
-        onChange={(e)=> handleChange(e,'notes')}
-        placeholder="Further information to my wish"
+        onChange={(e)=> handleInput(e,'notes')}
+        placeholder="Further information"
       /><br/>
       <div>
         <NavLink to="/WishList">
@@ -71,4 +72,4 @@ const mapDispatchToProps = (dispatch) => ({
 	addWish: (wish) => dispatch(addWish(wish))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewWishForm);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(NewWishForm));
