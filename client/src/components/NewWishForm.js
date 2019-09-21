@@ -8,8 +8,7 @@ const NewWishForm = ({addWish, history}) => {
     description: '',
     price: '',
     link: '',
-    notes: '',
-    id: ''
+    notes: ''
   };
 
   const [wish, setWish] = useState(initialState);

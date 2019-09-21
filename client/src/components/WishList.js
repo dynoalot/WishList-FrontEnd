@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
 
-
 const WishList = ({ wishList }) => {
   return (
     <div>

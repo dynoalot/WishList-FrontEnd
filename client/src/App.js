@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import WishList from "./components/WishList";
 import NewWishForm from './components/NewWishForm';
+import Friends from "./components/Friends";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" component={Dashboard} exact/>
           <Route path="/WishList/" component={WishList}/>
           <Route path="/NewWishForm" component={NewWishForm}/>
+          <Route path="/Friends" component={Friends}/>
       </Router>
     </div>
   );
