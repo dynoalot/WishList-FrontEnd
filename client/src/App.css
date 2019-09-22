@@ -1,3 +1,11 @@
 body {
   background: lightgrey;
 }
+
+.App {
+  min-height: 100vh;
+}
+
+/* *{
+  Box-sizing: border-box;
+  } */
