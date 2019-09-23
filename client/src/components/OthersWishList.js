@@ -1,28 +1,21 @@
-import React from "react";
-import './WishList.css'
+import React from 'react';
+import './MyWishList.css'
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import Home from '../assets/home-icon.png';
+// import Home from '../assets/home-icon.png';
 import Paper from '@material-ui/core/Paper';
 
-
-const WishList = ({ wishList }) => {
-  
+const OthersWishList = ({ wishList }) => {
 
   return (
     <div className="container-wishlist">
-      <h3 className="title-wishlist">My Wish List</h3>
-      <div className="add-btn-container">
-        <NavLink to="/NewWishForm">
-          <button className="btn-addwish">Add a wish</button>
-        </NavLink>
-      </div>
+      <h3 className="title-wishlist">Wish List</h3>
       <Paper>
         <table>
           <thead>
             <tr>
               <th>Description</th>
-              <th>Price</th>
+              <th>Price (€)</th>
               <th>Details</th>
             </tr>
           </thead>
@@ -57,4 +50,4 @@ const mapStateToProps = state => ({
   wishList: state.wishList
 });
 
-export default connect(mapStateToProps)(WishList);
+export default connect(mapStateToProps)(OthersWishList);

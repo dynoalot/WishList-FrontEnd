@@ -5,6 +5,10 @@ import './Friends.css';
 const Friends = () => {
   const [users, setUsers] = useState([]);
 
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   const getUsers = () => {
     fetch("http://localhost:5000/user")
       .then(result => result.json())
@@ -12,10 +16,6 @@ const Friends = () => {
         setUsers(user);
       });
   };
-
-  useEffect(() => {
-    getUsers();
-  }, []);
 
   return (
     <div className="container-myFriends">
