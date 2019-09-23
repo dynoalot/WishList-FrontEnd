@@ -3,18 +3,11 @@ import './WishList.css'
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import Home from '../assets/home-icon.png';
-
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 
 const WishList = ({ wishList }) => {
-  const classes = useStyles();
+  
 
   return (
     <div className="container-wishlist">
@@ -24,31 +17,30 @@ const WishList = ({ wishList }) => {
           <button className="btn-addwish">Add a wish</button>
         </NavLink>
       </div>
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <TableCell style={{ maxWidth: "2rem"}}>Description</TableCell>
-              <TableCell style={{ maxWidth: "2rem"}}>Price&nbsp;(€)</TableCell>
-              <TableCell style={{ maxWidth: "2rem"}}>Details</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
+      <Paper>
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
             {wishList.map(wish => (
-              <TableRow key={wish.id}>
-                <TableCell align="left">{wish.description}</TableCell>
-                <TableCell align="left">{wish.price}</TableCell>
-                <TableCell align="left">
+              <tr key={wish.id}>
+                <td>{wish.description}</td>
+                <td>{wish.price}</td>
+                <td>
                   <NavLink to="/NewWishForm">
                     <button>See Details</button>
                   </NavLink>
-                </TableCell>
-              </TableRow>
+                </td>
+              </tr>
             ))}
-          </TableBody>
-        </Table>
+          </tbody>
+        </table>
       </Paper>
-
 
 
 
@@ -66,23 +58,6 @@ const WishList = ({ wishList }) => {
     </div>
   );
 };
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: '100%',
-    marginTop: theme.spacing(3),
-    overflowX: 'auto',
-  },
-  table: {
-    minWidth: 650,
-  },
-}));
-
-function createData(description, price, details) {
-  return { description, price, details };
-}
-
-
 
 const mapStateToProps = state => ({
   wishList: state.wishList
