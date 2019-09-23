@@ -1,8 +1,8 @@
-.container-wishlist {
+.container-myFriends {
   height: 100vh;
 }
 
-.title-wishlist {
+.title-myFriends {
   font-size: 4vh;
   margin-left: 2vh;
   margin-top: 5vh; 
@@ -10,27 +10,27 @@
   justify-content: center;
 }
 
-.add-btn-container {
+.buttons-container-myFriends {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.btn-addwish {
+.btn-name-myFriends {
   background: #4382E3;
   border-radius: 3px;
   border: 0px;
   color: white;
   width: 45vh;
-  height: 5vh;
+  height: 10vh;
   margin-bottom: 5vh;
-  font-size: 2vh;
+  font-size: 2.5vh;
   padding: 0px 30px;
   box-shadow: 0px 3px 5px 2px #A0B1B9;
 }
 
-.footer{
+.footer-myFriends {
   height: 10%;
   width: 100%;
   position: fixed;
@@ -42,18 +42,11 @@
   display: flex;
 }
 
-.btn-back-wishlist {
+.btn-back-myFriends {
   background: #4382E3;
   border: 0px;
   color: white;
   height: 7vh;
   width: 7vh;
   margin: 10px;
-}
-
-.home-icon {
-  height: 10px;
-  width: 10px;
-  display: flex;
-  
 }

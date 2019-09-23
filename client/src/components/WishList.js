@@ -41,15 +41,9 @@ const WishList = ({ wishList }) => {
           </tbody>
         </table>
       </Paper>
-
-
-
-
-
-
       <div className="footer">
         <NavLink to="/">
-          <button className="btn-wishlist">Back</button>
+          <button className="btn-back-wishlist">Back</button>
           {/* <div classname="home-icon" >
             <img src={Home}/>
           </div> */}

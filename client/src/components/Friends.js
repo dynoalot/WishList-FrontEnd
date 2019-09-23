@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import './Friends.css';
 
 const Friends = () => {
+  const [users, setUsers] = useState([]);
+
+  const getUsers = () => {
+    fetch("http://localhost:5000/user")
+      .then(result => result.json())
+      .then(user => {
+        setUsers(user);
+      });
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   return (
-    <div>
-      <h3>My friends</h3>
-      <NavLink to="/">
-        <button>Back to Dashboard</button>
-      </NavLink>
+    <div className="container-myFriends">
+      <h3 className="title-myFriends">My friends</h3>
+      <div className="buttons-container-myFriends">
+        {users.slice(1).map(user => (
+          <button className="btn-name-myFriends">{user.username}</button>
+        ))}
+      </div>
+      <div className="footer-myFriends">
+        <NavLink to="/">
+          <button className="btn-back-myFriends">Back</button>
+        </NavLink>
+      </div>
     </div>
   );
 };

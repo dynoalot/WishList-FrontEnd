@@ -11,7 +11,7 @@
   font-size: 5vh;
 }
 
-.buttons-container {
+.buttons-container-dashboard{
   display: flex;
   justify-content: center;
   flex-direction: column;

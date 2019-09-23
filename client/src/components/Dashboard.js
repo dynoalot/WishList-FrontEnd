@@ -18,7 +18,7 @@ const Dashboard = () => {
     <div className="container-dashboard">
       <h1 className="title-dashboard">Do you have a wish?</h1>
       <Lottie options={defaultOptions} height={300} width={300}/>
-      <div className="buttons-container">
+      <div className="buttons-container-dashboard">
         <NavLink to="/WishList">
           <button className="btn-dashboard">My Wish List</button>
         </NavLink>
