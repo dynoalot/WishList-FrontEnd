@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { addWish } from '../actions';
 import './NewWishForm.css';
 
-const NewWishForm = ({addWish, history}) => {
+const NewWishForm = ({addWish, history, initalWish}) => {
   const initialState = {
     description: '',
     price: '',
@@ -24,7 +24,7 @@ const NewWishForm = ({addWish, history}) => {
       }})
       .then(res=>res.json())
       .then(()=>{
-        history.push("/mywishlist")
+        history.push("/myWishList")
       })
   }
 
@@ -40,7 +40,7 @@ const NewWishForm = ({addWish, history}) => {
       <form className="form-input-btn">
         <div className="form-group">
           <label>Description</label>
-          <input type="text" onChange={(e)=> handleInput(e,'description')}/>
+          <input type="text" value={wish.description} onChange={(e)=> handleInput(e,'description')}/>
         </div>
         <div className="form-group">
           <label>Price</label>

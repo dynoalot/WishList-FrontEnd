@@ -16,7 +16,7 @@ function App() {
           <Route path="/myWishList" component={MyWishList}/>
           <Route path="/newWishForm" component={NewWishForm}/>
           <Route path="/friends" component={Friends}/>
-          <Route path="/friendsWishList" component={OthersWishList}/>
+          <Route path="/friendsWishList/:id" component={OthersWishList}/>
       </Router>
     </div>
   );

@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './OthersWishList.css'
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { setWishes } from '../actions';
 
 
-const OthersWishList = ({ wishList }) => {
+const OthersWishList = ({ match }) => {
 
-  // useEffect(() => {
-  //   getFriendsWishes();
-  // }, []);
+  useEffect(() => {
+    getFriendsWishes();
+  }, []);
 
-  // const getFriendsWishes = () => {
-  //   fetch("http://localhost:5000/wishlist/:userId")
-  //     .then(result => result.json())
-  //     .then(friendsWish => {
-  //       setWishes(friendsWish);
-  //     });
-  // };
+  const [wishList, setwishList] = useState([])
 
+  const getFriendsWishes = () => {
+    const userId = match.params.id;
+    fetch("http://localhost:5000/wishlist/" + userId)
+      .then(result => result.json())
+      .then(friendsWish => {
+        setwishList(friendsWish);
+      });
+  };
 
   return (
     <div className="container-friendswishlist">
@@ -57,4 +60,8 @@ const mapStateToProps = state => ({
   wishList: state.wishList
 });
 
-export default connect(mapStateToProps)(OthersWishList);
+const mapDispatchToProps = dispatch => ({
+  setWishes: (wishList) => dispatch(setWishes(wishList))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(OthersWishList);

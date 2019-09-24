@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { setWishes } from '../actions';
 
 const MyWishList = ({ wishList, setWishes }) => {
-  
   useEffect(() => {
     getMyWishes();
   }, []);
@@ -18,6 +17,7 @@ const MyWishList = ({ wishList, setWishes }) => {
         setWishes(wishes);
       });
   };
+
 
   return (
     <div className="container-mywishlist">
@@ -65,7 +65,7 @@ const mapStateToProps = state => ({
   wishList: state.wishList
 });
 const mapDispatchToProps = dispatch => ({
-  setWishes: (wishList)=>dispatch(setWishes(wishList))
+  setWishes: (wishList) => dispatch(setWishes(wishList))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MyWishList);
