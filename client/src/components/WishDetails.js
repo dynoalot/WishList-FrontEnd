@@ -12,7 +12,7 @@ const WishDetails = ({ match }) => {
 
   const userId = match.params.userId;
   const wishId = match.params.id;
-  
+
   const getWishDetails = () => {
     fetch(`http://localhost:5000/wishlist/${userId}/${wishId}`)
     .then(result => result.json())
@@ -22,11 +22,10 @@ const WishDetails = ({ match }) => {
   }
 
 
-
-
   return (
-    <div>
-      <div>
+    <div className="container-details">
+      <h3 className="title-details">Details</h3>
+      <div className="container-all">
         <div>
           <h3>Description</h3>
           <div>{wishDetails.description}</div>
@@ -45,7 +44,6 @@ const WishDetails = ({ match }) => {
         </div>
       </div>
       <div className="footer-details">
-        {/* //TODO: fix user.id */}
         <NavLink to={`/friendsWishList/${userId}`}>
           <button className="btn-back-friends-wishlist">Back</button>
         </NavLink>

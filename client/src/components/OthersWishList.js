@@ -10,8 +10,8 @@ export default ({ match }) => {
   }, []);
 
   const [wishList, setwishList] = useState([]);
-
   const userId = match.params.id;
+
   const getFriendsWishes = () => {
     fetch("http://localhost:5000/wishlist/" + userId)
       .then(result => result.json())

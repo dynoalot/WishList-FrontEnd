@@ -1,3 +1,21 @@
+.title-details {
+  font-size: 4vh;
+  margin-left: 2vh;
+  margin-top: 5vh; 
+  display: flex;
+  justify-content: center;
+}
+
+.container-all {
+  width: 80%;
+  height: 60%;
+  margin: 4vh;
+  padding: 2vh;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 3px 5px 2px #A0B1B9;
+}
+
 .footer-details {
   height: 10%;
   width: 100%;
