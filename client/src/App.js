@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <Router>
           <Route path="/" component={Dashboard} exact/>
-          <Route path="/MyWishList" component={MyWishList}/>
-          <Route path="/NewWishForm" component={NewWishForm}/>
-          <Route path="/Friends" component={Friends}/>
+          <Route path="/mywishist" component={MyWishList}/>
+          <Route path="/newwishform" component={NewWishForm}/>
+          <Route path="/friends" component={Friends}/>
       </Router>
     </div>
   );
