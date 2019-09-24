@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import './MyWishList.css'
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
@@ -20,17 +20,17 @@ const MyWishList = ({ wishList, setWishes }) => {
   };
 
   return (
-    <div className="container-wishlist">
-      <h3 className="title-wishlist">My Wish List</h3>
-      <div className="add-btn-container">
+    <div className="container-mywishlist">
+      <h3 className="title-mywishlist">My Wish List</h3>
+      <div className="add-btn-container-mywishlist">
         <NavLink to="/newwishform">
           <button className="btn-addwish">Add a wish</button>
         </NavLink>
       </div>
-      <table className="table">
+      <table className="table-mywishlist">
         <thead>
           <tr>
-            <th className="">Description</th>
+            <th>Description</th>
             <th>Price (€)</th>
             <th>Details</th>
           </tr>
@@ -49,9 +49,9 @@ const MyWishList = ({ wishList, setWishes }) => {
           ))}
         </tbody>
       </table>
-      <div className="footer-wishlist">
+      <div className="footer-mywishlist">
         <NavLink to="/dashboard">
-          <button className="btn-back-wishlist">Back</button>
+          <button className="btn-back-mywishlist">Back</button>
           {/* <div classname="home-icon" >
             <img src={Home}/>
           </div> */}

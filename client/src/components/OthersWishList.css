@@ -1,8 +1,8 @@
-.container-mywishlist {
+.container-friendswishlist {
   height: 100vh;
 }
 
-.title-mywishlist {
+.title-friendswishlist {
   font-size: 4vh;
   margin-left: 2vh;
   margin-top: 5vh; 
@@ -10,27 +10,7 @@
   justify-content: center;
 }
 
-.add-btn-container-mywishlist {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.btn-addwish {
-  background: #4382E3;
-  border-radius: 3px;
-  border: 0px;
-  color: white;
-  width: 45vh;
-  height: 5vh;
-  margin-bottom: 5vh;
-  font-size: 2vh;
-  padding: 0px 30px;
-  box-shadow: 0px 3px 5px 2px #A0B1B9;
-}
-
-.table-mywishlist {
+.table-friendswishlist {
   background-color: white;
   padding: 3vh;
   border-radius: 3px;
@@ -38,7 +18,7 @@
   box-shadow: 0px 3px 5px 2px #A0B1B9;
 }
 
-.footer-mywishlist{
+.footer-friendswishlist {
   height: 10%;
   width: 100%;
   position: fixed;
@@ -50,17 +30,11 @@
   display: flex;
 }
 
-.btn-back-mywishlist {
+.btn-back-friendswishlist {
   background: #4382E3;
   border: 0px;
   color: white;
   height: 7vh;
   width: 7vh;
   margin: 10px;
-}
-
-.home-icon {
-  height: 10px;
-  width: 10px;
-  display: flex; 
 }
