@@ -16,16 +16,18 @@ const NewWishForm = ({addWish, history}) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // fetch("http://localhost:5000/wishlist/1", {
-    //   method: 'POST',
-    //   body: JSON.stringify({description, price, link, notes}),
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   }
-    //   .then(getMyWishes())
-    // })
-    addWish(wish);
-    history.push("/WishList")
+    fetch("http://localhost:5000/wishlist/1", {
+      method: 'POST',
+      body: JSON.stringify({...wish}),
+      headers: {
+        'content-type': 'application/json'
+      }})
+      .then(res=>res.json())
+      .then(()=>{
+        history.push("/mywishlist")
+      })
+ 
+
   }
 
   const handleInput = (event,key) => {

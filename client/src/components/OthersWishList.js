@@ -6,6 +6,19 @@ import { connect } from "react-redux";
 
 const OthersWishList = ({ wishList }) => {
 
+  // useEffect(() => {
+  //   getFriendsWishes();
+  // }, []);
+
+  // const getFriendsWishes = () => {
+  //   fetch("http://localhost:5000/wishlist/:userId")
+  //     .then(result => result.json())
+  //     .then(friendsWish => {
+  //       setWishes(friendsWish);
+  //     });
+  // };
+
+
   return (
     <div className="container-friendswishlist">
       <h3 className="title-friendswishlist">Wish List</h3>

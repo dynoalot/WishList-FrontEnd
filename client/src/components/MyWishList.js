@@ -11,11 +11,11 @@ const MyWishList = ({ wishList, setWishes }) => {
     getMyWishes();
   }, []);
 
-  const getMyWishes = () => {
+  const getMyWishes = () => {    
     fetch("http://localhost:5000/wishlist/1")
       .then(result => result.json())
-      .then(myWish => {
-        setWishes(myWish);
+      .then(wishes => {
+        setWishes(wishes);
       });
   };
 

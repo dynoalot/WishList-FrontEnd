@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 
 const reducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "ADD_WISH":
+    case "ADD_WISH":     
       return {
         ...state,
         wishList: [...state.wishList, action.wish]

@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
           <Route path="/dashboard" component={Dashboard} exact/>
-          <Route path="/mywishist" component={MyWishList}/>
+          <Route path="/mywishlist" component={MyWishList}/>
           <Route path="/newwishform" component={NewWishForm}/>
           <Route path="/friends" component={Friends}/>
           <Route path="/friendswishlist" component={OthersWishList}/>
