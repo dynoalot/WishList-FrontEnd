@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './OthersWishList.css'
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { setWishes } from '../actions';
 
 
 const OthersWishList = ({ match }) => {
 
   useEffect(() => {
     getFriendsWishes();
-  }, []);
+  });
 
   const [wishList, setwishList] = useState([])
 
@@ -56,12 +55,4 @@ const OthersWishList = ({ match }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  wishList: state.wishList
-});
-
-const mapDispatchToProps = dispatch => ({
-  setWishes: (wishList) => dispatch(setWishes(wishList))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(OthersWishList);
+export default connect()(OthersWishList);

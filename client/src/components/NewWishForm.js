@@ -22,8 +22,8 @@ const NewWishForm = ({addWish, history, initalWish}) => {
       headers: {
         'content-type': 'application/json'
       }})
-      .then(res=>res.json())
-      .then(()=>{
+      .then(res => res.json())
+      .then(() => {
         history.push("/myWishList")
       })
   }
