@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './OthersWishList.css'
 import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
 
 
-const OthersWishList = ({ match }) => {
+export default ({ match }) => {
 
   useEffect(() => {
     getFriendsWishes();
-  });
+  }, []);
 
-  const [wishList, setwishList] = useState([])
+  const [wishList, setwishList] = useState([]);
 
+  const userId = match.params.id;
   const getFriendsWishes = () => {
-    const userId = match.params.id;
     fetch("http://localhost:5000/wishlist/" + userId)
       .then(result => result.json())
       .then(friendsWish => {
@@ -38,7 +37,7 @@ const OthersWishList = ({ match }) => {
               <td>{wish.description}</td>
               <td>{wish.price}</td>
               <td>
-                <NavLink to="/newwishform">
+                <NavLink to={`/details/${userId}/${wish.id}`}>
                   <button>See Details</button>
                 </NavLink>
               </td>
@@ -54,5 +53,3 @@ const OthersWishList = ({ match }) => {
     </div>
   );
 };
-
-export default connect()(OthersWishList);

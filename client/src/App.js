@@ -7,6 +7,7 @@ import MyWishList from "./components/MyWishList";
 import NewWishForm from './components/NewWishForm';
 import Friends from "./components/Friends";
 import OthersWishList from "./components/OthersWishList";
+import WishDetails from "./components/WishDetails";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/newWishForm" component={NewWishForm}/>
           <Route path="/friends" component={Friends}/>
           <Route path="/friendsWishList/:id" component={OthersWishList}/>
+          <Route path="/details/:userId/:id" component={WishDetails}/>
       </Router>
     </div>
   );
