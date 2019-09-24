@@ -35,7 +35,7 @@ const OthersWishList = ({ wishList }) => {
         </table>
       </Paper>
       <div className="footer">
-        <NavLink to="/">
+        <NavLink to="/dashboard">
           <button className="btn-back-wishlist">Back</button>
           {/* <div classname="home-icon" >
             <img src={Home}/>

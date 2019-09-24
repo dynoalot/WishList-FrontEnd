@@ -50,7 +50,7 @@ const MyWishList = ({ wishList, setWishes }) => {
         </tbody>
       </table>
       <div className="footer-wishlist">
-        <NavLink to="/">
+        <NavLink to="/dashboard">
           <button className="btn-back-wishlist">Back</button>
           {/* <div classname="home-icon" >
             <img src={Home}/>

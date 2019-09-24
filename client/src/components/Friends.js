@@ -22,11 +22,13 @@ const Friends = () => {
       <h3 className="title-myFriends">My friends</h3>
       <div className="buttons-container-myFriends">
         {users.slice(1).map(user => (
-          <button className="btn-name-myFriends">{user.username}</button>
+          <NavLink to="/friendswishlist">
+            <button className="btn-name-myFriends">{user.username}</button>
+          </NavLink>
         ))}
       </div>
       <div className="footer-myFriends">
-        <NavLink to="/">
+        <NavLink to="/dashboard">
           <button className="btn-back-myFriends">Back</button>
         </NavLink>
       </div>
