@@ -1,5 +1,6 @@
 .container-mywishlist {
   height: 100vh;
+  /* background-image: url('../assets/flower.png') */ 
 }
 
 .title-mywishlist {
@@ -31,7 +32,6 @@
 }
 
 .table-mywishlist {
-  background-color: white;
   padding: 3vh;
   border-radius: 3px;
   width: 100%;

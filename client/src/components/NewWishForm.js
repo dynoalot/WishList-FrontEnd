@@ -4,8 +4,10 @@ import { connect } from 'react-redux'
 import { addWish } from '../actions';
 import './NewWishForm.css';
 
-const NewWishForm = ({addWish, history, initalWish}) => {
-  const initialState = {
+const NewWishForm = ({addWish, history, location}) => {
+
+  const wishLocation = location.state && location.state.wish
+  const initialState = wishLocation || {
     description: '',
     price: '',
     link: '',
@@ -40,19 +42,23 @@ const NewWishForm = ({addWish, history, initalWish}) => {
       <form className="form-input-btn">
         <div className="form-group">
           <label>Description</label>
-          <input type="text" value={wish.description} onChange={(e)=> handleInput(e,'description')}/>
+          <input type="text" value={wish.description}
+            onChange={(e)=> handleInput(e,'description')}/>
         </div>
         <div className="form-group">
           <label>Price</label>
-          <input type="text" onChange={(e)=> handleInput(e,'price')}/>
+          <input type="text" value={wish.price}
+            onChange={(e)=> handleInput(e,'price')}/>
         </div>
         <div className="form-group">
           <label>Link</label>
-          <input type="text" onChange={(e)=> handleInput(e,'link')}/>
+          <input type="text" value={wish.link}
+            onChange={(e)=> handleInput(e,'link')}/>
         </div>
         <div className="form-group">
           <label>Notes</label>
-          <input type="text" className="notes" onChange={(e)=> handleInput(e,'notes')}/>
+          <input type="text" value={wish.notes} className="notes" 
+            onChange={(e)=> handleInput(e,'notes')}/>
         </div>
         <div className="container-btn-form">
           <NavLink to="/myWishList">

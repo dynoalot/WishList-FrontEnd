@@ -41,7 +41,10 @@ const MyWishList = ({ wishList, setWishes }) => {
               <td>{wish.description}</td>
               <td>{wish.price}</td>
               <td>
-                <NavLink to="/newWishForm">
+                <NavLink to={{
+                  pathname: "/newWishForm", 
+                  state: {wish}
+                }}>
                   <button>See Details</button>
                 </NavLink>
               </td>
