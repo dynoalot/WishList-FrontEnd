@@ -19,7 +19,7 @@ const Dashboard = () => {
       <h1 className="title-dashboard">Do you have a wish?</h1>
       <Lottie options={defaultOptions} height={300} width={300}/>
       <div className="buttons-container-dashboard">
-        <NavLink to="/mywishist">
+        <NavLink to="/myWishList">
           <button className="btn-dashboard">My Wish List</button>
         </NavLink>
         <NavLink to="/friends">

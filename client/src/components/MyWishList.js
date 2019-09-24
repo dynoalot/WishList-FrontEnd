@@ -23,7 +23,7 @@ const MyWishList = ({ wishList, setWishes }) => {
     <div className="container-mywishlist">
       <h3 className="title-mywishlist">My Wish List</h3>
       <div className="add-btn-container-mywishlist">
-        <NavLink to="/newwishform">
+        <NavLink to="/newWishForm">
           <button className="btn-addwish">Add a wish</button>
         </NavLink>
       </div>
@@ -41,7 +41,7 @@ const MyWishList = ({ wishList, setWishes }) => {
               <td>{wish.description}</td>
               <td>{wish.price}</td>
               <td>
-                <NavLink to="/newwishform">
+                <NavLink to="/newWishForm">
                   <button>See Details</button>
                 </NavLink>
               </td>

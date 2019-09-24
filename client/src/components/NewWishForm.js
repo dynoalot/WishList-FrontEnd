@@ -26,8 +26,6 @@ const NewWishForm = ({addWish, history}) => {
       .then(()=>{
         history.push("/mywishlist")
       })
- 
-
   }
 
   const handleInput = (event,key) => {
@@ -57,14 +55,14 @@ const NewWishForm = ({addWish, history}) => {
           <input type="text" className="notes" onChange={(e)=> handleInput(e,'notes')}/>
         </div>
         <div className="container-btn-form">
-          <NavLink to="/mywishist">
+          <NavLink to="/myWishList">
             <button className="btn-form">Cancel</button>
           </NavLink>
           <button className="btn-form" onClick={handleSubmit} type="submit">Submit</button>
         </div>
       </form>
       <div className="footer-form">
-        <NavLink to="/mywishist">
+        <NavLink to="/myWishList">
           <button className="btn-back-form">Back</button>
         </NavLink>
       </div>

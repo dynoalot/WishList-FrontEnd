@@ -13,10 +13,10 @@ function App() {
     <div className="App">
       <Router>
           <Route path="/dashboard" component={Dashboard} exact/>
-          <Route path="/mywishlist" component={MyWishList}/>
-          <Route path="/newwishform" component={NewWishForm}/>
+          <Route path="/myWishList" component={MyWishList}/>
+          <Route path="/newWishForm" component={NewWishForm}/>
           <Route path="/friends" component={Friends}/>
-          <Route path="/friendswishlist" component={OthersWishList}/>
+          <Route path="/friendsWishList" component={OthersWishList}/>
       </Router>
     </div>
   );
