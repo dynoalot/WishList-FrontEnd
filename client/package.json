@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.4.2",
     "contentful": "^7.10.0",
+    "jest": "^24.8.0",
     "lottie-web": "^5.5.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
