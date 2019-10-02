@@ -15,6 +15,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react"],
+  env: {
+    "jest/globals": true
+  },
+  plugins: ["react", "jest"],
   rules: {}
 };
